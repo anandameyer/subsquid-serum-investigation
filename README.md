@@ -48,10 +48,11 @@ node -r dotenv/config lib/main.js
 # Checkout indexed orders
 docker exec "$(basename "$(pwd)")-db-1" psql -U postgres \
   -c "SELECT * FROM orders LIMIT 10"
-```
 
 # Output orders file in JSON
 if you running this project, the orders we successfully read will be outputed to file `orders.json`
+```
+
 
 For further details, please consult heavily commented [main.ts](./src/main.ts). 
 
